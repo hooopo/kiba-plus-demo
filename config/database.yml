@@ -1,0 +1,39 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  local_infile: true
+  database: crm2_dev
+  pool: 5
+  username: hooopo
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  local_infile: true
+  database: crm2_test
+  pool: 5
+  username: hooopo
+  password:
+
+etl_execution:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  local_infile: true
+  database: crm_etl_execution
+  pool: 5
+  username: hooopo
+  password:
+
+shopperplus:
+  host: localhost
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: shopperplus
+  pool: 5
+  username: root
+  password: ""
