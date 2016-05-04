@@ -1,3 +1,24 @@
+PATH
+  remote: ~/w/DataDuck
+  specs:
+    dataduck (0.8.0)
+      aws-sdk (~> 2.0)
+      dotenv (~> 2.0)
+      mysql2 (~> 0.4)
+      oj (~> 2.12)
+      pg (~> 0.16)
+      sentry-raven (~> 0.15)
+      sequel (~> 4.19)
+      sequel-redshift
+      typhoeus (~> 0.8)
+      whenever (~> 0.9)
+
+PATH
+  remote: ~/w/kiba-plus
+  specs:
+    kiba-plus (0.1.0)
+      kiba
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,10 +58,17 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    aws-sdk (2.3.1)
+      aws-sdk-resources (= 2.3.1)
+    aws-sdk-core (2.3.1)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.3.1)
+      aws-sdk-core (= 2.3.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.5)
+    chronic (0.10.2)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -51,19 +79,29 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
+    dotenv (2.1.1)
     erubis (2.7.0)
+    ethon (0.9.0)
+      ffi (>= 1.3.0)
     execjs (2.6.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jmespath (1.2.4)
+      json_pure (>= 1.8.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    json_pure (1.8.3)
+    kiba (0.6.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -75,8 +113,11 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.12.0)
+    multipart-post (2.0.0)
+    mysql2 (0.4.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    oj (2.15.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -125,6 +166,12 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sentry-raven (0.15.6)
+      faraday (>= 0.7.6)
+    sequel (4.34.0)
+    sequel-redshift (0.0.1)
+      pg
+      sequel
     slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
@@ -137,6 +184,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
+    typhoeus (0.8.0)
+      ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.0)
@@ -146,6 +195,8 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -153,8 +204,11 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  dataduck!
   jbuilder (~> 2.0)
   jquery-rails
+  kiba
+  kiba-plus!
   pg
   pry-rails
   puma

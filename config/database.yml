@@ -1,5 +1,7 @@
 development:
   adapter: postgresql
+  host: localhost
+  port: 9700
   encoding: unicode
   reconnect: false
   local_infile: true
@@ -10,6 +12,8 @@ development:
 
 test:
   adapter: postgresql
+  host: localhost
+  port: 9700
   encoding: unicode
   reconnect: false
   local_infile: true
@@ -20,6 +24,8 @@ test:
 
 etl_execution:
   adapter: postgresql
+  host: localhost
+  port: 9700
   encoding: unicode
   reconnect: false
   local_infile: true
