@@ -25,9 +25,12 @@ post_process do
   puts "*** Duration (min): #{duration_in_minutes.round(2)}"
 end
 
-#destination CustomerCsvDest, :output_file => "/tmp/customer_bulk.csv"
+destination CustomerCsvDest, :output_file => "/tmp/customer_bulk.csv"
 #destination CustomerCsvDest1
 
 
-destination CustomerBulk2Destination, :connect_url => 'postgresql://hooopo@localhost:9700/crm2_dev',
- :table_name => "customers"
+destination CustomerBulkDestination,
+:connect_url => 'postgresql://hooopo@localhost:9700/crm2_dev',
+ :table_name => "customers",
+ :truncate => false,
+ :incremental => true
