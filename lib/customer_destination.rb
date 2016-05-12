@@ -1,7 +1,7 @@
 require 'kiba/plus/pg_destination'
 class CustomerDestination < Kiba::Plus::PgDestination
   def connect_url
-    "postgresql://hooopo@localhost:9700/crm2_dev"
+    "postgresql://hooopo@localhost:5432/crm2_dev"
   end
 
   def prepare_name

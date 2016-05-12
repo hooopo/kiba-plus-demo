@@ -30,7 +30,6 @@ destination CustomerCsvDest, :output_file => "/tmp/customer_bulk.csv"
 
 
 destination CustomerBulkDestination,
-:connect_url => 'postgresql://hooopo@localhost:9700/crm2_dev',
  :table_name => "customers",
  :truncate => false,
  :incremental => true

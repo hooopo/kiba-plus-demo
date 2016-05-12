@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   host: localhost
-  port: 9700
+  port: 5432
   encoding: unicode
   reconnect: false
   local_infile: true
@@ -13,23 +13,11 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  port: 9700
+  port: 5432
   encoding: unicode
   reconnect: false
   local_infile: true
   database: crm2_test
-  pool: 5
-  username: hooopo
-  password:
-
-etl_execution:
-  adapter: postgresql
-  host: localhost
-  port: 9700
-  encoding: unicode
-  reconnect: false
-  local_infile: true
-  database: crm_etl_execution
   pool: 5
   username: hooopo
   password:
