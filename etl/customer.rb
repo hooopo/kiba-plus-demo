@@ -10,10 +10,20 @@ source CustomerSource, :connect_url => mysql_url
 
 start_time = Time.now
 pre_process do
+  @job_id = Kiba::Plus::Job.new(
+    :connect_url => 'postgresql://hooopo@localhost:5432/crm2_dev',
+    :start_at => start_time,
+    :job_name => "customer"
+    ).start
   puts "*** START ACCOUNT MIGRATION #{start_time}***"
 end
 
 post_process do
+  Kiba::Plus::Job.new(
+    :connect_url => 'postgresql://hooopo@localhost:5432/crm2_dev',
+    :job_id => @job_id,
+    :job_name => "customer"
+  ).complete
   end_time = Time.now
   duration_in_minutes = (end_time - start_time)/60
   puts "*** End ACCOUNT MIGRATION #{end_time}***"
