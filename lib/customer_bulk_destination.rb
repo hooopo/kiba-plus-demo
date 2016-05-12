@@ -1,5 +1,4 @@
-require 'kiba/plus/pg_bulk_destination'
-class CustomerBulkDestination < Kiba::Plus::PgBulkDestination
+class CustomerBulkDestination < Kiba::Plus::Destination::PgBulk
   def connect_url
     "postgresql://hooopo@localhost:5432/crm2_dev"
   end

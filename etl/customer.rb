@@ -1,13 +1,8 @@
 #!/usr/bin/env ruby
 
-$:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'kiba/plus'
-require 'customer_source'
-require 'customer_destination'
-require 'customer_csv_dest'
-require 'customer_csv_dest1'
-require 'customer_bulk_destination'
-require 'customer_bulk2_destination'
+files = File.expand_path(File.dirname(__FILE__) + "/../lib/*.rb")
+Dir.glob(files).each {|f| require(f);puts "import #{f}"}
 
 mysql_url = 'mysql://root@localhost/shopperplus'
 

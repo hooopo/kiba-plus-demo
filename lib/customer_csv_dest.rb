@@ -1,5 +1,4 @@
-require 'kiba/plus/csv_destination'
-class CustomerCsvDest < Kiba::Plus::CsvDestination
+class CustomerCsvDest < Kiba::Plus::Destination::Csv
   def output_file
     "/tmp/customer.csv"
   end
